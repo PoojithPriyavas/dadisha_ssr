@@ -1,0 +1,10 @@
+@keyframes shimmer {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.skeleton, .skeleton-text, .skeleton-button, .skeleton-icon, .skeleton-input {
+  animation: shimmer 1.5s infinite ease-in-out;
+  border-radius: 4px;
+}

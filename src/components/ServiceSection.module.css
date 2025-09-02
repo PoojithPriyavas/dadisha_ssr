@@ -1,0 +1,102 @@
+.servicesSection {
+    background: #0d0d0d;
+    padding: 60px 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.subTitle {
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.subTitle::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #4d6fff;
+    margin: 8px auto 0;
+}
+
+.cardsContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    color: #000;
+    border-radius: 12px;
+    max-width: 300px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.iconArea {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px 0;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.idNumber {
+    font-size: 24px;
+    color: #e0e0e0;
+    font-weight: bold;
+    opacity: 0.3;
+}
+
+.image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    margin: 10px 0;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 20px 10px;
+    text-align: left;
+}
+
+.card p {
+    font-size: 14px;
+    color: #444;
+    text-align: left;
+    margin: 0 20px 15px;
+    line-height: 1.4;
+}
+
+.readMore {
+    margin: 0 20px;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    color: #4d6fff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}

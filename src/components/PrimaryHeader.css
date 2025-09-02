@@ -1,0 +1,202 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Top Blue Bar */
+.top-bar {
+    background-color: #fbae24;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message {
+    display: flex;
+}
+
+.address {
+    display: flex;
+}
+
+.contact-content {
+    margin-left: 10px;
+}
+
+.announcement {
+    font-weight: 500;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Middle Section */
+.middle-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 40px;
+    background-color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-icon {
+    background-color: #e8ebf9;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.contact-text {
+    line-height: 1.4;
+}
+
+.contact-text p {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 2px;
+}
+
+.contact-text strong {
+    font-size: 16px;
+    color: #000;
+}
+
+.appointment-btn {
+    background-color: #fbae24;
+    color: white;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Navigation Bar */
+/* .nav-bar {
+  background-color: #111;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-links li::after {
+  content: '▾';
+  font-size: 12px;
+  margin-left: 5px;
+  position: relative;
+  top: -1px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 16px;
+} */
+
+
+/* Navigation Bar */
+.nav-bar {
+    background-color: #111;
+    color: #fff;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.nav-links li {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links li::after {
+    /* content: '▾'; */
+    font-size: 10px;
+    margin-left: 5px;
+    position: relative;
+    top: -1px;
+}
+
+/* Right section of nav */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-actions span {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

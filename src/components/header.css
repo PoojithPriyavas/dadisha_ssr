@@ -1,0 +1,238 @@
+.menu-icon {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  color: #333;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100vh;
+  background: #fff !important;
+  color: #000 !important;
+  padding: 20px;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.navbar.header-light {
+  height: 90px;
+  /* or your desired height */
+  min-height: 70px;
+  /* to prevent collapsing */
+}
+
+/* Add this to your CSS */
+.nav-link {
+  font-weight: normal;
+  transition: font-weight 0.2s ease;
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+}
+
+.nav-link.active-nav {
+  font-weight: bold;
+  color: #FFA500;
+  /* Optional: change color for active item */
+  position: relative;
+}
+
+/* Optional: Add underline for active item */
+.nav-link.active-nav::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FFA500;
+}
+
+/* For mobile menu items */
+.menu-item.active {
+  font-weight: bold;
+  color: #FFA500;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-submenu {
+  position: fixed;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100vh;
+  background: #ffffff !important;
+  color: black !important;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.side-submenu.open {
+  left: 0;
+}
+
+.menu-list,
+.sub-menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  padding: 12px 10px;
+  border-bottom: 1px solid #555;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item:hover {
+  background: #55555517 !important;
+  background-color: #55555517 !important;
+}
+
+.submenu-icon,
+.back-icon {
+  float: right;
+  font-size: 12px;
+  margin-left: 10px;
+  color: #bbb;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #000 !important;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-icon.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #000 !important;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000000;
+}
+
+.side-submenu.open+.side-submenu {
+  z-index: 1002;
+}
+
+/* Add these styles to your header.css */
+
+/* Search input container */
+.position-relative.w-full.rounded.overflow-hidden {
+  border: 1px solid #ddd;
+  /* Default border */
+  transition: border-color 0.3s ease;
+}
+
+/* Focused state */
+.position-relative.w-full.rounded.overflow-hidden:focus-within {
+  border-color: #FFA500;
+  /* Orange border when focused */
+  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+  /* Optional glow effect */
+}
+
+/* The actual input field */
+.border-none.text-back.overflow-hidden.w-100 {
+  border: none;
+  /* Remove default border */
+  outline: none;
+  /* Remove default focus outline */
+  padding: 10px 15px;
+  /* Add some padding */
+  font-size: 14px;
+  /* Set font size */
+  width: calc(100% - 50px);
+  /* Adjust width to account for search icon */
+}
+
+/* Search icon container */
+.position-absolute.end-0.top-0.px-3.py-1.h-full.custom-pointer {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  /* Add separator */
+}
+
+
+@media (min-width: 768px) {
+
+  .side-menu {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: none !important;
+  }
+
+  .info-card-row {
+    justify-content: center;
+
+  }
+
+}
+
+@media (max-width:919px) {
+  .info-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width:395px) {
+  .info-text {
+    font-size: 11px;
+  }
+
+  .info-card-main {
+    margin-left: 2% !important;
+  }
+}
+
+@media (min-width:500px)and (max-width:767px) {
+  .info-card-main {
+    margin-left: 10% !important;
+  }
+}
+
+.menu-icon-mobile-only {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menu-icon-mobile-only {
+    display: none !important;
+  }
+}

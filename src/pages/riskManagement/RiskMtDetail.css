@@ -1,0 +1,366 @@
+/* RiskMtDetail.css */
+
+.service-detail-container {
+  display: flex;
+  margin-top: 100px;
+  padding: 20px;
+  gap: 30px;
+  /* height: calc(100vh - 120px);  */
+  overflow: hidden; 
+}
+
+.left-section {
+  flex: 0 0 70%;
+  padding-right: 20px;
+  overflow-y: auto; 
+}
+
+.service-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  /* color: #2d3748; */
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.service-image-container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.service-image2 {
+  width: 100%;
+  height: auto;
+  /* aspect-ratio: 3/1; */
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  /* color: #4a5568; */
+  text-align: justify;
+}
+
+.service-detail-description p {
+  /* margin-bottom: 15px; */
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #718096;
+}
+
+/* Right Section - 30% */
+.right-section {
+  flex: 0 0 30%;
+  padding: 15px;
+  border-left: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Take full height of container */
+  overflow: hidden; /* Prevent section overflow */
+}
+
+/* Search Section */
+.search-section {
+  margin-bottom: 20px;
+  flex-shrink: 0; /* Don't shrink */
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Search Input Wrapper with Icon */
+.search-input-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 50px 12px 16px; /* Added right padding for icon */
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+/* Search Icon Button */
+.search-icon-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #718096;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon-button:hover {
+  color: #4299e1;
+  background-color: rgba(66, 153, 225, 0.1);
+}
+
+.search-icon-button:active {
+  color: #2b6cb0;
+}
+
+/* Search Icon SVG */
+.search-icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+.clear-button {
+  padding: 12px 20px;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.clear-button:hover {
+  background-color: #c53030;
+}
+
+/* Featured Section */
+.featured-section {
+  flex: 1; /* Take remaining space */
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Important for flexbox overflow */
+}
+
+.featured-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* color: #2d3748; */
+  margin-bottom: 15px;
+  flex-shrink: 0; /* Don't shrink */
+}
+
+.service-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto; /* Only this scrolls */
+  flex: 1; /* Take remaining space */
+  padding-right: 5px;
+}
+
+.service-card2 {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  flex-shrink: 0; /* Don't shrink cards */
+}
+
+.service-card2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-image {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.service-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-card-content {
+  padding: 16px;
+}
+
+.service-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  /* color: #2d3748; */
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.service-card-description {
+  font-size: 0.9rem;
+  /* color: #718096; */
+  line-height: 1.4;
+  margin: 0;
+}
+
+.no-featured {
+  text-align: center;
+  color: #a0aec0;
+  font-style: italic;
+  padding: 40px 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-detail-container {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+    height: auto; /* Allow natural height on mobile */
+    min-height: calc(100vh - 120px);
+  }
+
+  .left-section,
+  .right-section {
+    flex: none;
+    padding: 0;
+    height: auto;
+  }
+
+  .right-section {
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+    display: block; /* Change from flex on mobile */
+  }
+
+  .service-title {
+    font-size: 2rem;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .search-input-wrapper,
+  .clear-button {
+    width: 100%;
+  }
+
+  .service-cards-container {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-detail-container {
+    padding: 10px;
+  }
+
+  .service-title {
+    font-size: 1.8rem;
+  }
+
+  .service-card-content {
+    padding: 12px;
+  }
+
+  .service-card-image {
+    height: 100px;
+  }
+}
+
+.risk-sidebar-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.risk-sidebar-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    /* color: #333; */
+    margin-bottom: 15px;
+}
+
+.risk-sidebar-section ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.risk-sidebar-section ul li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    /* color: #555; */
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.risk-sidebar-section ul li:hover {
+    color: #10b981;
+}
+
+.service-detail-container {
+  .h1, h1, .h2, h2 {
+    color: #377ba9 !important;
+  }
+  
+  .h3, h3, .h4, h4 {
+    color: #517fa0 !important;
+  }
+  
+  /* Dotted styling for list items */
+  li {
+    position: relative;
+    padding-left: 20px;
+    list-style: none;
+    
+    &::before {
+      content: "•";
+      color: #377ba9;
+      font-size: 18px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  
+  /* Alternative dotted border styling */
+  li.dotted-border {
+    border-left: 2px dotted #517fa0;
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
+  
+  /* Dotted underline for list items */
+  li.dotted-underline {
+    border-bottom: 1px dotted #377ba9;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+  }
+}

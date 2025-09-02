@@ -1,0 +1,125 @@
+/* .category-item {
+  cursor: pointer;
+}
+
+.sub-category-dropdown {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #efefef;
+  padding: 10px;
+  z-index: 1000;
+  width: 100%;
+  height: 40vh;
+  column-count: 4; 
+  column-gap: 20px; 
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white 25%,
+    #f5f5f5 25%,
+    #f5f5f5 50%,
+    white 50%,
+    white 75%,
+    #f5f5f5 75%,
+    #f5f5f5 100%
+  );
+}
+
+.sub-category-item {
+  margin-bottom: 10px;
+  break-inside: avoid-column; 
+}
+
+.child-category-item {
+  margin-top: 5px;
+  color: #878787;
+} */
+/* ///////////////////////// */
+.category-menu {
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding: 10px 0;
+}
+
+.category-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.category-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.category-name {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sub-category-wrapper {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.sub-category-dropdown {
+  background: white;
+  border: 1px solid #efefef;
+  height: 40vh;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.sub-category-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  position: relative;
+}
+
+.sub-category-item:hover {
+  background: #f5f5f5;
+}
+.child-category-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  position: relative;
+}
+.child-category-item:hover {
+  background: #f5f5f5;
+}
+.sub-category-name{
+  margin-bottom:0
+}
+
+.child-category-dropdown {
+  background: white;
+  border: 1px solid #ddd;
+  min-width: 200px;
+  height: 40vh;
+  display: none;
+  border-radius: 5px;
+}
+
+.sub-category-wrapper:hover .child-category-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width:991px){
+  .category-menu{
+    display: none !important;
+  }
+}
+

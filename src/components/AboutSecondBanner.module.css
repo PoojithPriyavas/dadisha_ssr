@@ -1,0 +1,146 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    /* or consider using min-height */
+    background-image: url('/images/about-banner-1.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* Remove display:flex from here - let overlay handle it */
+}
+
+.overlay {
+    position: absolute;
+    /* Make overlay absolute to cover entire hero */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* This makes it cover the entire parent */
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.rowContainer {
+    width: 100%;
+    /* max-width: 1200px; */
+    /* Optional for better content width control */
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.content h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 0;
+    /* Remove bottom margin since we're using gap */
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+    /* Remove default margins */
+}
+
+.appointmentBtn {
+    background-color: #2a55e5;
+    color: #fff;
+    padding: 14px 30px;
+    width: 300px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    /* Add space above the button */
+}
+
+.appointmentBtn:hover {
+    background-color: #153db5;
+    box-shadow: 0 4px 12px rgba(42, 85, 229, 0.3);
+
+}
+
+/* Add these to your existing CSS */
+.btnIcon {
+    margin-right: 8px;
+}
+
+.arrow {
+    margin-left: 8px;
+    display: inline-flex;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+.appointmentBtn:hover .arrow {
+    transform: translateX(3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .overlay {
+        padding: 0 20px;
+    }
+
+    .appointmentBtn {
+        width: 250px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .appointmentBtn {
+        background-color: #2a55e5;
+        color: #fff;
+        padding: 10px 30px;
+        max-width: 235px;
+        font-size: 12px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        /* Add space above the button */
+    }
+
+
+}

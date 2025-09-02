@@ -1,0 +1,309 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Hide scrollbar for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent !important;
+  width: 0px !important; /* Width of the scrollbar */
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.section-dark .slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.custom-pointer {
+  cursor: pointer;
+}
+.h-fit {
+  height: fit-content;
+}
+.w-fit {
+  width: fit-content;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.scrollbar-none {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none; /* WebKit (Chrome, Safari) */
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.h-20t {
+  height: 5rem;
+}
+
+.w-20t {
+  width: 5rem;
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+.prd-top {
+  margin-top: 5%;
+}
+.swiper-slide {
+  background-color: transparent !important;
+}
+.bottom-60p {
+  bottom: 60px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fbae24 !important;
+}
+
+.text-primary {
+  color: #fbae24 !important;
+}
+
+.textprimary {
+  color: #fbae24 !important;
+}
+
+.bg-primary,
+.bg-p {
+  background-color: #fbae24 !important;
+}
+.bg-primary-disabled,
+.bg-p-disabled {
+  background-color: #fbae24 !important;
+  opacity: 0.5;
+}
+
+.text-primary,
+.text-p {
+  color: #fbae24 !important;
+}
+.borderprimary {
+  border: 1px solid #fbae24 !important;
+}
+
+@media (max-width: 576px) {
+  .prd-top {
+    margin-top: 22%;
+  }
+}
+
+.animation-rotation {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-nav .active {
+  background-color: #ffa500 !important;
+  color: #fff !important;
+}
+
+.hover-btn:hover {
+  background-color: #343a40 !important;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.hidden {
+  display: hidden;
+}
+.swiper {
+  height: fit-content !important;
+}
+.bordergrey {
+  border: 1px solid #ececec;
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+.categoey-page {
+  margin-top: 7rem;
+}
+
+.headtextres {
+  font-size: 1.6rem;
+}
+
+.headsubtextres {
+  font-size: 1.4rem;
+}
+
+.font-noto {
+  font-family: "Noto Sans", serif !important;
+  color: #6f7071;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.cardtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 26px;
+  min-height: 52px;
+}
+.cartimg {
+  height: 20rem;
+}
+@media screen and (max-width: 768px) {
+  .headtextres {
+    font-size: 1.2rem;
+  }
+  .headsubtextres {
+    font-size: 1rem;
+  }
+  .heart-res {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .cartimg {
+    height: 18rem;
+  }
+  .cardtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 20px;
+    min-height: 40px;
+  }
+  .cardtitle-sub {
+    font-size: 1.1rem !important;
+  }
+  .bg-gary-p {
+    background-color: #e3e3ec45 !important;
+  }
+}
+
+/* Table styles to match the uploaded image */
+table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 20px 0 !important;
+  /* border-radius: 10px; */
+  border: 1px solid #f2f2f2 !important;
+}
+
+table th {
+  background-color: #f2f2f2 !important;
+  color: #333 !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  padding: 12px 15px !important;
+}
+
+table td {
+  padding: 12px 15px !important;
+  border-bottom: 1px solid #ddd !important;
+  color: #555 !important;
+  vertical-align: middle !important;
+}
+
+/* Alternate row coloring */
+table tr:nth-child(even) {
+  background-color: #f9f9f9 !important;
+}
+
+/* Hover effect for rows */
+table tr:hover {
+  background-color: #f1f1f1 !important;
+}
+
+/* Remove bottom border from last row */
+.text-editor table tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* Fix for alignment in both th and td */
+table th,
+table td {
+  vertical-align: middle !important;
+}
+
+:where(.css-dev-only-do-not-override-49qm).ant-dropdown {
+  z-index: 9999;
+}
+
+.search-input {
+  border: none;
+  overflow: hidden;
+  /* other styles */
+}
+
+.search-input:focus {
+  border: 1px solid #99999942 !important;
+  border-radius: 6px;
+}

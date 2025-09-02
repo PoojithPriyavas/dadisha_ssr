@@ -1,0 +1,106 @@
+/* Floating Icons */
+.floating-icons {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 9999; /* Increased z-index */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    pointer-events: none; /* Allow clicks to pass through container */
+}
+
+.floating-icons .icon {
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    pointer-events: all; /* Re-enable clicks on icons */
+    width: 48px;
+    height: 48px;
+}
+
+.floating-icons .icon.whatsapp {
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+}
+
+.floating-icons .icon.phone {
+    background-color: #007bff; /* Blue */
+    color: white;
+    transform: scaleX(-1);
+}
+
+.floating-icons .icon.whatsapp:hover {
+    transform: scale(1.1);
+    background-color: #128C7E; /* Darker green on hover */
+}
+
+.floating-icons .icon.phone:hover {
+    transform: scaleX(-1) scale(1.1);
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Compare Button */
+.compare-button-wrapper {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+}
+
+.compare-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.compare-button:hover {
+    background-color: #0056b3;
+}
+
+.compare-badge {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-icons {
+        right: 15px;
+        bottom: 80px;
+    }
+    
+    .compare-button-wrapper {
+        right: 15px;
+        bottom: 20px;
+    }
+    
+    .compare-button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}

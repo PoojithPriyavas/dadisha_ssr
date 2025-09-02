@@ -1,0 +1,136 @@
+.hero {
+    position: relative;
+    height: 60vh;
+    background: url('/images/new/about-us-bg.jpg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.searchWrapper {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: nowrap;
+    /* Ensure horizontal layout */
+    margin-top: 1rem;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    /* Remove margin-top so it aligns horizontally */
+    margin-top: 0;
+}
+
+.ctaButton {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 1800px;
+    width: 100%;
+    padding: 0 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.heroText {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.heroText h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.heroText p {
+    font-size: 1rem;
+    color: #ddd;
+    margin: 0;
+}
+
+/* .ctaButton {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+} */
+
+.searchInput {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .searchWrapper {
+        flex-direction: column;
+    }
+
+    .heroText h1 {
+        font-size: 2.5rem;
+    }
+
+    .heroText {
+        align-items: center;
+        text-align: center;
+    }
+
+    .heroContent {
+        align-items: center;
+    }
+}

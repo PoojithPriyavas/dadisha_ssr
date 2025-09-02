@@ -1,0 +1,117 @@
+.header {
+  font-family: sans-serif;
+  color: #fff;
+}
+
+/* Top Bar */
+.topBar {
+  background: #1a1a1a;
+  padding: 8px 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.social a,
+.contact a,
+.contact span {
+  margin-right: 20px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.social a:hover,
+.contact a:hover {
+  color: #3c55ff;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logoIcon {
+  color: #3c55ff;
+  font-size: 28px;
+  margin-right: 8px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.navLinks a:hover,
+.navLinks .active {
+  color: #3c55ff;
+}
+
+.active {
+  color: #3c55ff;
+}
+
+/* Right Side */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.appointmentBtn {
+  background: #3c55ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.appointmentBtn:hover {
+  background: #2a3cb8;
+}
+
+.iconBtn {
+  width: 40px;
+  height: 40px;
+  background: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #000;
+}

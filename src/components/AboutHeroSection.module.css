@@ -1,0 +1,167 @@
+/* AboutHeroSection.module.css */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: clamp(250px, 40vh, 400px);
+    background-image: url('/images/about-banner-2.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-top: 90px;
+}
+
+.overlay {
+    width: 100%;
+    height: clamp(250px, 40vh, 400px);
+    /* Changed from 40vh to 100% to match parent */
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* Reduced from 60px and will adjust with media queries */
+}
+
+.rowContainer {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically on mobile */
+    justify-content: center;
+    align-items: flex-start;
+    /* Align items to the start */
+    width: 100%;
+    max-width: 1400px;
+    /* Added max-width for better control on large screens */
+    gap: 30px;
+    /* Added gap between content and navLinks */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    /* Changed from px to rem for better scaling */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 1rem;
+    /* Changed from px to rem */
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 600px;
+    text-align: justify;
+
+    /* Limit paragraph width */
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    gap: 20px;
+    /* Prevent text wrapping */
+}
+
+.navLinks a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    /* Better icon alignment */
+}
+
+.navLinks a:hover {
+    color: #3c55ff;
+}
+
+.navLinks span {
+    font-size: 1.1rem;
+    /* Changed from px to rem */
+    line-height: 1;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+.arrow {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.navLinks a:hover .arrow {
+    transform: translateX(3px);
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+    .overlay {
+        padding: 0 40px;
+    }
+
+    .rowContainer {
+        flex-direction: row;
+        /* Side by side on larger screens */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .content h1 {
+        font-size: 3.5rem;
+    }
+
+    .content p {
+        font-size: 1.1rem;
+    }
+
+    .navLinks {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .overlay {
+        padding: 0 60px;
+    }
+
+    .content h1 {
+        font-size: 4rem;
+        /* 64px */
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .navLinks {
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+
+    .icon,
+    .arrow {
+        width: 14px;
+        height: 14px;
+    }
+}

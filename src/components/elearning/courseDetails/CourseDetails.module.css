@@ -1,0 +1,388 @@
+/* Container and Layout */
+.container {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    margin-top: 65px;
+}
+
+.wrapper {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+/* Course Header */
+.courseHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .courseHeader {
+        flex-direction: row;
+    }
+}
+
+.courseImage {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .courseImage {
+        width: 12rem;
+        height: 8rem;
+    }
+}
+
+.courseInfo {
+    flex: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.categoryTag {
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+}
+
+.industryTag {
+    background-color: #dcfce7;
+    color: #166534;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.courseStats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Video Player */
+.videoContainer {
+    aspect-ratio: 16/9;
+    background-color: black;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.videoFrame {
+    width: 100%;
+    height: 100%;
+}
+
+/* Section Titles */
+.sectionTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.courseDescription {
+    color: #374151;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+
+/* Curriculum */
+.curriculum {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+}
+
+.sectionButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.sectionButton:hover {
+    background-color: #f9fafb;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.sectionNumber {
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+}
+
+.sectionName {
+    font-weight: 500;
+}
+
+.lectureCount {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.chevron {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #9ca3af;
+}
+
+.lectures {
+    border-top: 1px solid #e5e7eb;
+}
+
+.lecture {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    transition: background-color 0.2s;
+}
+
+.lecture:hover {
+    background-color: #f9fafb;
+}
+
+.lectureAvailable {
+    cursor: pointer;
+}
+
+.lectureLocked {
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+.lectureInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.lectureIcons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.availableIcon {
+    width: 1rem;
+    height: 1rem;
+    color: #10b981;
+}
+
+.lockIcon {
+    width: 1rem;
+    height: 1rem;
+    color: #9ca3af;
+}
+
+.lectureName {
+    color: #111827;
+}
+
+.lectureLocked .lectureName {
+    color: #6b7280;
+}
+
+.lectureType {
+    background-color: #f3f4f6;
+    color: #6b7280;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.lectureTime {
+    font-size: 0.875rem;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.timeIcon {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+/* Sidebar Styles */
+.pricingSection {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.originalPrice {
+    font-size: 1.125rem;
+    color: #6b7280;
+    text-decoration: line-through;
+}
+
+.discount {
+    background-color: #dcfce7;
+    color: #166534;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+}
+
+.enrollButton {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.enrollButton:hover {
+    background-color: #1d4ed8;
+}
+
+.sidebarTitle {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.certIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #eab308;
+}
+
+.infoList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.infoItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoLabel {
+    color: #6b7280;
+}
+
+.infoValue {
+    font-weight: 500;
+}
+
+.certInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.requirements {
+    color: #374151;
+    font-size: 0.875rem;
+}

@@ -1,0 +1,226 @@
+.statebutton {
+  background-color: transparent;
+  min-height: 36px;
+  padding: 0 22px;
+  border: 2px solid #cfcfcf;
+  color: #cfcfcf;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.active {
+  border: 2px solid #ffa500;
+  color: #ffa500;
+}
+
+.ordercontainer {
+  background: #fafafa;
+  padding: 75px 35px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  /* align-items: center; */
+  flex-direction: column;
+  margin-block: 48px;
+}
+
+.ordertowrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderproductcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-top: 35px;
+}
+
+.orderproductcard {
+  display: flex;
+  gap: 22px;
+  flex-direction: row;
+}
+
+.imagewrap {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1;
+  background-color: #d9d9d9;
+}
+
+.imagewrap img {}
+
+.button {
+  background-color: #ffa500;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 34px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.producttext {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.productpropertyHeading {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.productpropertycontent {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.orderprogress {
+  margin-top: 26px;
+}
+
+.orderprogresheading {
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 20px !important;
+  overflow: hidden;
+}
+
+.orderprogresheading::after {
+  content: '';
+  position: absolute;
+  /* transform: translate(0, 50%); */
+  width: 100%;
+  margin-left: 20px;
+  height: 1px;
+  background-color: #dbdbdb;
+  top: 50%;
+  transform: translate(0px, 50%);
+}
+
+.orderprogresswrap {
+  display: flex;
+  /* grid-template-columns: repeat(5,1fr); */
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 20px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.circle {
+  position: relative;
+  /* KEY: Makes .para's absolute positioning relative to this circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFA500;
+  background: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #FFA500;
+  font-weight: bold;
+}
+
+.linewrap {
+  width: 100%;
+  border-top: 1px dotted #ffa500;
+}
+
+.circlewrap {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.para {
+  position: absolute;
+  top: 120%;
+  /* Pushes it below the circle */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  /* Adjust as needed */
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.buttonwrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btnsecondary {
+  border: 1px solid #ffa500;
+  background-color: white;
+  color: #ffa500;
+}
+
+/* active states  */
+
+.circleactive {
+  background: #fbe9c8;
+}
+
+.linewrap.lineactive {
+  border-top: 1px solid #ffa500;
+}
+
+ol li {
+  font-size: 0.8rem !important;
+  color: #484646;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 680px) {
+  .statebutton {
+    font-size: 12px;
+  }
+
+  .orderproductcard {
+    flex-direction: column;
+  }
+
+  .orderproductcontainer {
+    margin-top: 10px;
+  }
+
+  .productpropertyHeading,
+  .productpropertycontent {
+    font-size: 10px;
+  }
+
+  .ordercontainer {
+    padding: 28px 20px;
+  }
+
+  .orderprogress {
+    display: hide;
+  }
+}
+
+.downloadBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #FFA500;
+  transition: transform 0.2s;
+}
+
+.downloadBtn:hover {
+  transform: scale(1.1);
+}

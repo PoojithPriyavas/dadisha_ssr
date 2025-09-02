@@ -1,0 +1,247 @@
+.zoom-container {
+  display: none;
+}
+
+.zoom-container:hover {
+  display: block;
+}
+
+/* Custom Navigation Buttons */
+.swiper-nav-btns {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  z-index: 10;
+}
+
+.swiper-nav-btns button {
+  width: 40px;
+  /* Adjust the width and height to make the button rounded */
+  height: 40px;
+  border-radius: 50%;
+  /* Make the button rounded */
+  background-color: #fbae24;
+  /* Background color with opacity */
+  color: white;
+  /* Arrow color */
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  color: #000;
+  /* Adjust color as needed */
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.details .pname {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.detailprice {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.p-inputnumber-input {
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.p-inputnumber-button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+
+.disablebtn {
+  cursor: not-allowed;
+}
+
+/* .key-features ul {
+  list-style-type: disc !important;
+  padding-left: 20px !important;
+  margin-left: 20px !important;
+}
+
+.key-features li {
+  display: list-item !important;
+} */
+.detailbtn-sec {
+  border: 1px solid #ffa500;
+  color: #ffa500;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.detailbtn-sec:hover {
+  background-color: #ffa500;
+  color: white;
+  border-color: #ffa500;
+}
+
+.detailbtn-pri {
+  background-color: #ffa500;
+  color: white;
+  border: 1px solid #ffa500;
+  transition: all 0.3s ease-in-out;
+}
+
+.detailbtn-pri:hover {
+  background-color: white;
+  color: #ffa500;
+  border: 1px solid #ffa500;
+}
+
+.tab-switcher button {
+  padding: 6px 20px;
+  cursor: pointer;
+  border: none;
+}
+
+
+
+.tab-switcher button.active {
+  border-bottom: 2px solid black;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.mainimage {
+  max-height: 34rem;
+  /* max-width: 34rem; */
+  height: auto;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 1px solid #ececec;
+}
+
+.mainimage-z-plus {
+  z-index: 10;
+}
+
+.text-gray {
+  color: #f1f1f1;
+}
+
+.mainimage-z-minus {
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .details .pname {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .detailprice {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .header-position {
+    margin-top: 5.5rem;
+  }
+}
+
+/* Skeleton Loader Styles */
+
+.skeleton-loader {
+  display: flex;
+  gap: 24px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.skeleton-card {
+  width: 100%;
+  height: 400px;
+  /* Adjust to the height of your actual product card */
+  max-width: 300px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: skeleton-loading 1.5s infinite ease-in-out;
+}
+
+.skeleton-card .skeleton-image {
+  width: 100%;
+  height: 180px;
+  background-color: #e0e0e0;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 12px;
+}
+
+.skeleton-card .skeleton-text {
+  width: 80%;
+  height: 14px;
+  background-color: #e0e0e0;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+
+.skeleton-card .skeleton-price {
+  width: 50%;
+  height: 14px;
+  background-color: #e0e0e0;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #e0e0e0;
+  }
+
+  50% {
+    background-color: #f5f5f5;
+  }
+
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .zoom-container {
+    display: none !important;
+  }
+
+  .mainimage img {
+    pointer-events: none !important;
+    max-width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+.my-swiper .swiper-wrapper {
+  margin-left: 1rem !important;
+  margin-right: 0 !important;
+  transform: none !important;
+}
+
+.my-swiper .swiper-slide {
+  width: auto !important;
+  /* Let slides size themselves */
+}
+
+.card-sec {
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  margin-top: 20px;
+}

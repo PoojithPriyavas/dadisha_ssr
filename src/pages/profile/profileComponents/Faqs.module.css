@@ -1,0 +1,40 @@
+.btn{
+    border: 0;
+    background: transparent;
+}
+.btnactive{
+    color:#FFA500;
+}
+.accordianwrap{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.accordianmain{
+    box-shadow: 0px 0px 5px 0px #00000014;
+    padding:16px 37px ;
+}
+.headericonwrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.primary{
+    color: #FFA500;
+    font-size: large;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    /* background: #FFA500; */
+}
+.header{
+    font-size: 16px;
+    font-weight: 600;
+}
+.active{
+    transform: rotate(45deg);
+}
+.conatcttext{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19px;
+}

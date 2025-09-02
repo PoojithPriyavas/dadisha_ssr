@@ -1,0 +1,175 @@
+.cart-count {
+  right: 2px;
+}
+
+.cart-count .content {
+  background-color: red;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body .buttons-container {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-body:hover .buttons-container {
+  opacity: 1;
+}
+
+.underline-none {
+  text-decoration: none;
+}
+
+/* .card-body .buttons-container {
+    display: none !important;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-body:hover .buttons-container {
+    display: flex !important;
+  } */
+
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.1);
+}
+
+.mthead {
+  margin-top: 3.8rem;
+}
+
+.mtheads {
+  margin-top: 1.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .mthead {
+    margin-top: 1.8rem;
+  }
+}
+
+.custom-contact-input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #3333 !important;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+
+.custom-contact-input:focus {
+  border-bottom: 1px solid #000 !important;
+  outline: none;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  outline: none;
+}
+
+.headtextres {
+  font-size: 1.6rem;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.order-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: start;
+  flex: 1;
+}
+
+.order-buttons button {
+  font-size: 1rem;
+  padding: 8px 16px;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-buttons {
+    width: 100%;
+    justify-content: start;
+    /* center buttons horizontally */
+    flex-wrap: wrap;
+  }
+
+  .headtextres {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  .order-buttons button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Extra small screen adjustments */
+@media screen and (max-width: 370px) {
+  .order-buttons button {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+  }
+}
+
+@media screen and (max-width:1300px) {
+  .contact-text {
+    font-size: 15vw;
+  }
+}
+
+@media screen and (min-width:1301px) {
+  .contact-text {
+    font-size: 13vw;
+  }
+}
+
+.heading-qhse {
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: clamp(2.8rem, 5vw, 4.2rem);
+}
+
+.home-section-three-para {
+  padding-bottom: 60px;
+}
+
+@media screen and (max-width:768px) {
+  .home-section-three {
+    padding-bottom: 0px !important;
+  }
+
+  .hover-box:hover .home-hover-btn {
+    display: none !important;
+  }
+
+  .home-section-three-para {
+    padding-bottom: 0px !important;
+  }
+}
+
+.tag-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: auto;
+  z-index: 9999;
+  pointer-events: none;
+}

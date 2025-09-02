@@ -1,0 +1,33 @@
+.statsSection {
+    padding: 3rem 0;
+    background: white;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.statItem {
+    text-align: center;
+    padding: 2rem;
+}
+
+.statNumber {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.statLabel {
+    color: #666;
+    font-weight: 500;
+}
