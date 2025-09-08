@@ -15,7 +15,9 @@ const LoadingSpinner = () => (
 export default function CourseList({ courses }) {
     const { courseFilter, filterLoading } = useContext(Context);
     const navigate = useNavigate();
-    console.log(courseFilter, "filter");
+    
+    // Use provided courses data if available, otherwise fall back to courseFilter from context
+    const coursesToDisplay = courses && courses.results ? courses : courseFilter;
 
     const routerClick = (slug) => {
         console.log("click called")
@@ -31,7 +33,7 @@ export default function CourseList({ courses }) {
         );
     }
 
-    if (!courseFilter || courseFilter.length === 0) {
+    if (!coursesToDisplay || (!coursesToDisplay.results && !Array.isArray(coursesToDisplay))) {
         return (
             <div className={styles.wrapper}>
                 <div className={styles.noCourses}>No courses found.</div>
@@ -39,10 +41,15 @@ export default function CourseList({ courses }) {
         );
     }
 
+    // Handle both array format and object with results property
+    const courseItems = Array.isArray(coursesToDisplay) 
+        ? coursesToDisplay 
+        : coursesToDisplay.results || [];
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.courseGrid}>
-                {courseFilter?.results?.map((course) => (
+                {courseItems.map((course) => (
                     <div key={course.id} className={styles.courseCard} style={{ cursor: 'pointer' }} onClick={() => routerClick(course.slug)}>
                         <img src={course.image} alt={course.title} className={styles.courseImage} />
                         <div className={styles.courseContent}>

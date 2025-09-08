@@ -76,37 +76,40 @@ export default function BlogDetails() {
     const { page } = useParams();
     const navigate = useNavigate();
 
-    const [blogCategories, setBlogCategories] = useState([]);
-    const [allBlogs, setAllBlogs] = useState([]);
-    const [tags, setTags] = useState([]);
-    const [recentPosts, setRecentPosts] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [blogCategories, setBlogCategories] = useState(initialCategories);
+    const [allBlogs, setAllBlogs] = useState(initialBlogs);
+    const [tags, setTags] = useState(initialTags);
+    const [recentPosts, setRecentPosts] = useState(initialRecentPosts);
+    const [loading, setLoading] = useState(!initialBlogs.length);
 
     const [searchTerm, setSearchTerm] = useState("");
     const [activeCategory, setActiveCategory] = useState(null);
     const [activeTag, setActiveTag] = useState(null);
 
     const productsPerPage = 10;
+    // Ensure page is always a number
     const currentPage = Math.max(parseInt(page) || 1, 1);
 
     // Get SSR data if available
     const ssrBlogListData = useBlogListSSRData();
+    
+    // Initialize state with SSR data to prevent hydration mismatch
+    const initialBlogs = ssrBlogListData?.blogs || [];
+    const initialCategories = ssrBlogListData?.categories || [];
+    const initialTags = ssrBlogListData?.tags || [];
+    const initialRecentPosts = ssrBlogListData?.recentPosts || [];
 
     useEffect(() => {
+        // Skip fetching if we already have data from SSR
+        if (initialBlogs.length > 0 && initialCategories.length > 0) {
+            setLoading(false);
+            return;
+        }
+        
         const fetchData = async () => {
             setLoading(true);
             try {
-                // If we have SSR data, use it instead of making a new request
-                if (ssrBlogListData && ssrBlogListData.blogs) {
-                    setBlogCategories(ssrBlogListData.categories || []);
-                    setAllBlogs(ssrBlogListData.blogs || []);
-                    setTags(ssrBlogListData.tags || []);
-                    setRecentPosts(ssrBlogListData.recentPosts || []);
-                    setLoading(false);
-                    return;
-                }
-                
-                // Otherwise, fetch data client-side
+                // Fetch data client-side only if SSR data is not available
                 const [categories, blogs, tagsData, posts] = await Promise.all([
                     axios.get('/disha/blog-categories'),
                     axios.get('/disha/get-blogs'),
@@ -126,7 +129,7 @@ export default function BlogDetails() {
         };
 
         fetchData();
-    }, [ssrBlogListData]);
+    }, [initialBlogs.length, initialCategories.length]);
 
     const filteredBlogs = useMemo(() => {
         return allBlogs.filter(blog => {
@@ -150,7 +153,7 @@ export default function BlogDetails() {
     }, [filteredBlogs, currentPage, productsPerPage]);
 
     useEffect(() => {
-        if (filteredBlogs.length > 0 && (currentPage < 1 || currentPage > totalPages)) {
+        if (filteredBlogs.length > 0 && totalPages > 0 && (currentPage < 1 || currentPage > totalPages)) {
             navigate('/blogs/1', { replace: true });
         }
     }, [currentPage, totalPages, navigate, filteredBlogs]);

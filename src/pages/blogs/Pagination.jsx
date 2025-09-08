@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Pagination = ({ currentPage, totalPages, arrOfCurrButtons, prevPageClick, nextPageClick, setCurrentPage }) => {
   return (
@@ -8,19 +9,19 @@ const Pagination = ({ currentPage, totalPages, arrOfCurrButtons, prevPageClick, 
             
           {currentPage > 1 && (
             <li className="dt-item">
-              <a className="dt-link" onClick={prevPageClick}>Prev</a>
+              <Link to={`/blogs/${currentPage - 1}`} className="dt-link" onClick={prevPageClick}>Prev</Link>
             </li>
           )}
 
           {arrOfCurrButtons.map((data, index) => (
             <li key={index} className={`dt-item ${currentPage === data ? "active" : ""}`}>
-              <a className="dt-link" onClick={() => setCurrentPage(data)}>{data}</a>
+              <Link to={`/blogs/${data}`} className="dt-link" onClick={() => setCurrentPage(data)}>{data}</Link>
             </li>
           ))}
 
           {currentPage < totalPages && (
             <li className="dt-item">
-              <a className="dt-link" onClick={nextPageClick}>Next</a>
+              <Link to={`/blogs/${currentPage + 1}`} className="dt-link" onClick={nextPageClick}>Next</Link>
             </li>
           )}
         </ul>

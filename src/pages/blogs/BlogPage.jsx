@@ -8,34 +8,51 @@ import { useBlogSSRData } from "../../hooks/useSSRData";
 
 function BlogPage() {
   const { slug } = useParams();
-  const [blogDetails, setBlogDetails] = useState([]);
-  const [loading, setLoading] = useState(true);
-  
   // Get SSR data if available
   const ssrBlogData = useBlogSSRData();
+  
+  // Initialize state with SSR data to prevent hydration mismatch
+  const [blogDetails, setBlogDetails] = useState(ssrBlogData || []);
+  const [loading, setLoading] = useState(!ssrBlogData);
 
-  const getBlogDetails = async () => {
-    try {
-      // If we have SSR data, use it instead of making a new request
-      if (ssrBlogData) {
-        setBlogDetails(ssrBlogData);
-        setLoading(false);
-        return;
-      }
-      
-      // Otherwise, fetch data client-side
-      const response = await axios.get(`/disha/blog-detail/${slug}`);
-      setBlogDetails(response.data);
-    } catch (err) {
-      console.error("Failed to fetch blog details", err);
-    } finally {
-      setLoading(false);
+const getBlogDetails = async () => {
+  try {
+    // Skip fetching if we already have data from SSR
+    if (ssrBlogData) {
+      return;
     }
-  };
+    
+    // Check if slug is a number (page number) or a string (actual slug)
+    if (slug && !isNaN(slug)) {
+      // This is a page number, not a blog slug
+      console.error("Numeric page parameter provided instead of blog slug");
+      setLoading(false);
+      return;
+    }
+    
+    // Otherwise, fetch data client-side
+    const response = await fetch(`https://admin.dadisha.com/disha/blog-detail/${slug}`);
+    
+    // Check if the response is ok
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    setBlogDetails(data);
+  } catch (err) {
+    console.error("Failed to fetch blog details", err);
+  } finally {
+    setLoading(false);
+  }
+};
 
-  useEffect(() => {
+useEffect(() => {
+  // Only fetch if we don't have SSR data
+  if (!ssrBlogData) {
     getBlogDetails();
-  }, [slug, ssrBlogData]);
+  }
+}, [slug, ssrBlogData]);
 
   if (loading) {
     return <div className="text-center mt-20 text-lg">Loading blog...</div>;

@@ -155,9 +155,9 @@ function App() {
             <Route path="/return-submit/:orderid" element={<MyOrdersReturn />} />
             <Route path="/compare" element={<Compare />} />
             <Route path="/sellwithus" element={<SellWithUs />} />
-            <Route path="/blogs/:page" element={<BlogDetails />} />
-            <Route path="/blogs/:slug" element={<BlogDetails />} />
             <Route path="/blogs/pages/:slug" element={<Blogs />} />
+            <Route path="/blogs/:page(\d+)" element={<BlogDetails />} />
+            <Route path="/blogs/:slug" element={<Blogs />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/supplier-policy" element={<SupplierPolicy />} />

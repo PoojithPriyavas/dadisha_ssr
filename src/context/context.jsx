@@ -5,9 +5,10 @@ import axios from '../utilities/customAxios.js';
 const Context = createContext();
 
 const AppProvider = ({ children, initialSSRData = {} }) => {
-  const [homeData, setHomeData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [categoryLoader, setCategoryLoader] = useState(true);
+  // Initialize state with SSR data if available
+  const [homeData, setHomeData] = useState(initialSSRData.homeData || []);
+  const [loading, setLoading] = useState(!initialSSRData.homeData);
+  const [categoryLoader, setCategoryLoader] = useState(!initialSSRData.homeData);
   const [selectedCurrency, setSelectedCurrency] = useState('INR');
   const [openBulkOrderPopUp, setOpenBulkOrderPopUp] = useState(false);
   const [bulkReqSendData, setBulkReqSendData] = useState({
@@ -18,14 +19,14 @@ const AppProvider = ({ children, initialSSRData = {} }) => {
   });
   const [userData, setUserData] = useState([]);
   const [selectedProductIds, setSelectedProductIds] = useState([]);
-  const [trendingPrdData, setTrendingPrdData] = useState([]);
-  const [weaklyPrdData, setWeaklyPrdData] = useState([]);
-  const [qhseTagPrdData, setQhseTagPrdData] = useState([]);
-  const [trendingSearch, setTrendingSearch] = useState([]);
-  const [trendingLoading, setTrendingLoading] = useState([]);
-  const [weeklyLoading, setWeeklyLoading] = useState(true);
-  const [qhseLoading, setQhseLoading] = useState(true);
-  const [policyDetails, setPolicyDetails] = useState([]);
+  const [trendingPrdData, setTrendingPrdData] = useState(initialSSRData.trendingPrdData || []);
+  const [weaklyPrdData, setWeaklyPrdData] = useState(initialSSRData.weaklyPrdData || []);
+  const [qhseTagPrdData, setQhseTagPrdData] = useState(initialSSRData.qhseTagPrdData || []);
+  const [trendingSearch, setTrendingSearch] = useState(initialSSRData.trendingSearch || []);
+  const [trendingLoading, setTrendingLoading] = useState(!initialSSRData.trendingPrdData);
+  const [weeklyLoading, setWeeklyLoading] = useState(!initialSSRData.weaklyPrdData);
+  const [qhseLoading, setQhseLoading] = useState(!initialSSRData.qhseTagPrdData);
+  const [policyDetails, setPolicyDetails] = useState(initialSSRData.policyDetails || []);
   const [zindexIncrease, setZindexIncrease] = useState(true);
 
   // Helper function for API calls

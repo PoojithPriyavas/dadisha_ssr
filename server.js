@@ -64,16 +64,31 @@ async function createServer() {
       // 4. Fetch data based on the route
       let ssrData = {};
       
-      // Check for blog detail page
-      const blogDetailMatch = url.match(/\/blogs\/([^\/]+)$/);
+      // Check for blog detail page - only non-numeric slugs
+      const blogDetailMatch = url.match(/\/blogs\/([^\/\d][^\/]*)$/);
       if (blogDetailMatch) {
         const slug = blogDetailMatch[1];
-        ssrData.blogDetail = await fetchBlogData(slug);
+        const blogData = await fetchBlogData(slug);
+        if (blogData) {
+          ssrData.blogDetail = blogData;
+        }
       }
       
       // Check for blog list page
-      if (url.match(/\/blogs\/pages\//) || url === '/blogs/') {
-        ssrData.blogList = await fetchBlogListData();
+      const blogListMatch = url.match(/\/blogs\/(\d+)$/);
+      if (blogListMatch || url === '/blogs/' || url === '/blogs') {
+        const blogListData = await fetchBlogListData();
+        if (blogListData) {
+          ssrData.blogList = blogListData;
+        }
+      }
+      
+      // Check for blog pages route
+      if (url.match(/\/blogs\/pages\//)) {
+        const blogListData = await fetchBlogListData();
+        if (blogListData) {
+          ssrData.blogList = blogListData;
+        }
       }
       
       // Check for product detail page
@@ -115,7 +130,9 @@ async function createServer() {
           helmet.meta.toString() + 
           helmet.link.toString() + 
           helmet.style.toString() + 
-          helmet.script.toString() : ''}</head>`);
+          helmet.script.toString() : ''}
+          <script>window.__SSR_DATA__ = ${JSON.stringify(ssrData)};</script>
+        </head>`);
 
       // 8. Send the rendered HTML back.
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html);

@@ -80,13 +80,13 @@ export default function ProductFooter() {
       <div style={{ borderBottom: '1px solid #DEE2E6' }}></div>
       <div className="container mt-2">
         <div className="row">
-          <div class="col-12 col-sm-6 col-md-4 ">
+          <div className="col-12 col-sm-6 col-md-4 ">
             <h1 className="fw-bold fs-6 text-black mt-4">
               Dadisha Private limited
             </h1>
             <div className="d-flex flex-column gap-2 font-noto">
-              <p className="mb-0" style={{ cursor: 'pointer' }}  ><span style={{ paddingRight: '5px', cursor: 'pointer' }}><i class="fa fa-phone" aria-hidden="true"></i></span>{policy.mobile_number}</p>
-              <p className="mb-0" style={{ cursor: 'pointer' }} ><span style={{ paddingRight: '5px', cursor: 'pointer' }}><i class="fa fa-envelope" aria-hidden="true"></i></span>{policy.email}</p>
+              <p className="mb-0" style={{ cursor: 'pointer' }}  ><span style={{ paddingRight: '5px', cursor: 'pointer' }}><i className="fa fa-phone" aria-hidden="true"></i></span>{policy.mobile_number}</p>
+              <p className="mb-0" style={{ cursor: 'pointer' }} ><span style={{ paddingRight: '5px', cursor: 'pointer' }}><i className="fa fa-envelope" aria-hidden="true"></i></span>{policy.email}</p>
               <p className="mb-0" style={{ cursor: 'pointer' }} onClick={() => navigate('/privacy-policy')}>Privacy Policy</p>
               <p className="mb-0" style={{ cursor: 'pointer' }} onClick={() => navigate('/shopping-policy')}>Shopping Policy</p>
               <p className="mb-0" style={{ cursor: 'pointer' }} onClick={() => navigate('/supplier-policy')}>Supplier Policy</p>
@@ -173,7 +173,7 @@ export default function ProductFooter() {
             </div>
           </div>
 
-         { isTokenValid()&&<div class="col-12 col-sm-2 col-md-3 ">
+         { isTokenValid()&&<div className="col-12 col-sm-2 col-md-3 ">
             <h1 className="fw-bold fs-6 text-black mt-4 ">
               Your Account & Orders
             </h1>
@@ -196,7 +196,7 @@ export default function ProductFooter() {
             </div>
           </div>}
 
-          <div class="col-12 col-sm-2 col-md-3 ">
+          <div className="col-12 col-sm-2 col-md-3 ">
             <h1 className="fw-bold fs-6 text-black mt-4 ">Resources</h1>
             <div className="d-flex flex-column gap-2 font-noto">
               <p className="mb-0" style={{ cursor: 'pointer' }} onClick={() => {
@@ -218,7 +218,7 @@ export default function ProductFooter() {
               }}>Blog</p>
             </div>
           </div>
-          <div class="col-12 col-sm-2 col-md-2 ">
+          <div className="col-12 col-sm-2 col-md-2 ">
             <h1 className="fw-bold fs-6 text-black mt-4 ">Partner</h1>
             <div className="d-flex flex-column gap-2 font-noto">
               <p

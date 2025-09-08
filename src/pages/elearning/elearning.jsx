@@ -91,7 +91,7 @@ export default function Elearning() {
           onClearFilters={handleClearFilters}
         />
       </div>
-      <CourseList courses={enhancedCourseRef} />
+      <CourseList courses={ssrElearningData || coursesData} />
       {/* <Status /> */}
       <FooterTwo />
     </div >
